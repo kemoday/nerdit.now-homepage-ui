@@ -13,7 +13,7 @@ body {
 }
 header {
   nav {
-    padding: 3rem 10rem;
+    padding: 1rem 4rem;
     padding-bottom: 0.5rem;
     border-bottom: 1px solid #eee;
     display: flex;
@@ -23,13 +23,13 @@ header {
       a {
         text-decoration: none;
         color: $primaryTextColor;
-        font-size: 22px;
+        font-size: 18px;
       }
-      font-size: 22px;
+      font-size: 18px;
       display: block;
       flex: 1;
       span {
-        font-size: 22px;
+        font-size: 18px;
         font-weight: bolder;
         color: $primaryColor;
       }
@@ -44,6 +44,7 @@ header {
           color: $primaryColor !important;
         }
         a {
+          font-size: 0.8rem;
           text-decoration: none;
           color: black;
           margin: 0 1rem;
@@ -63,7 +64,7 @@ header {
       border: none;
       outline: none;
       color: $primaryColor;
-      font-size: 1rem;
+      font-size: 0.8rem;
     }
     button[type="button"] {
       display: none;
@@ -77,11 +78,11 @@ header {
       rgba(255, 255, 255, 1) 100%
     );
     display: flex;
-    padding: 5rem;
+    padding: 4rem;
     padding-bottom: 1rem;
     .hero-titles {
       .fa-plus {
-        font-size: 3rem;
+        font-size: 2.5rem;
         color: $primaryColor;
       }
       flex: 1;
@@ -108,7 +109,7 @@ header {
         align-items: center;
         button {
           cursor: pointer;
-          margin: 0 0rem;
+          margin: 0;
           border: none;
           padding: 1rem 3rem;
           background-color: transparent;
@@ -133,11 +134,18 @@ header {
               background-color: transparent;
             }
           }
+          &:last-child {
+            padding: 0;
+            margin-left: 1rem;
+          }
         }
       }
     }
     .hero-ill {
       flex: 1;
+      display: flex;
+      justify-content: center;
+      align-items: center;
       img {
         width: 100%;
       }
