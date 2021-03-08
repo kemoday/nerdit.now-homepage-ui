@@ -3,6 +3,8 @@
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   -webkit-transition-duration: 0.5s;
           transition-duration: 0.5s;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
 }
 
 body {
@@ -136,50 +138,45 @@ header .hero .hero-titles .cta-btns {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: start;
-      -ms-flex-pack: start;
-          justify-content: flex-start;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-}
-
-header .hero .hero-titles .cta-btns button {
-  cursor: pointer;
-  margin: 0;
-  border: none;
-  padding: 1rem 3rem;
-  background-color: transparent;
-}
-
-header .hero .hero-titles .cta-btns button:hover {
-  color: #0684ac;
-}
-
-header .hero .hero-titles .cta-btns button li {
-  border: 1px solid #81c41d;
-  border-radius: 50%;
-  color: #81c41d;
-  padding: 1rem;
-  margin-right: 1rem;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 
 header .hero .hero-titles .cta-btns button:first-child {
-  color: white;
+  cursor: pointer;
+  margin: 0;
+  display: block;
+  text-align: right;
+  border-radius: 20px;
   background-color: #81c41d;
-  border-radius: 50px;
-  border: 1px solid transparent;
+  border: none;
+  outline: none;
+  color: white;
+  font-weight: bold;
+  padding: 0.5rem 2rem;
+  -ms-flex-item-align: start;
+      align-self: flex-start;
 }
 
 header .hero .hero-titles .cta-btns button:first-child:hover {
-  border: 1px solid #81c41d;
-  color: #81c41d;
-  background-color: transparent;
+  background-color: #707070;
 }
 
 header .hero .hero-titles .cta-btns button:last-child {
-  padding: 0;
-  margin-left: 1rem;
+  background-color: transparent;
+  border: none;
+}
+
+header .hero .hero-titles .cta-btns button:last-child li {
+  border: 1px solid #81c41d;
+  border-radius: 50%;
+  color: #81c41d;
+  padding: 0.7rem;
+  margin-right: 0.5rem;
 }
 
 header .hero .hero-ill {
@@ -199,6 +196,149 @@ header .hero .hero-ill {
 
 header .hero .hero-ill img {
   width: 100%;
+}
+
+main .section-title {
+  text-align: center;
+}
+
+main .section-title h2 {
+  color: #81c41d;
+  font-size: 2rem;
+  margin-bottom: 5px;
+  display: inline-block;
+}
+
+main .section-title span {
+  border-radius: 8px;
+  display: inline-block;
+  width: 40px;
+  height: 5px;
+  background-color: #81c41d;
+  margin-bottom: 1rem;
+}
+
+main .services {
+  margin: 2rem 0;
+  margin-top: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+main .services .service {
+  border-radius: 20px;
+  border: 1px solid #ddd;
+  margin: 0 1rem;
+  -ms-flex-preferred-size: 25%;
+      flex-basis: 25%;
+  padding: 0;
+}
+
+main .services .service * {
+  margin: 5px;
+}
+
+main .services .service H2 {
+  color: #81c41d;
+  text-align: center;
+}
+
+main .services .service p {
+  margin: 1rem 0.5rem;
+}
+
+main .services .service li {
+  display: block;
+  text-align: center;
+  font-size: 3rem;
+  color: #999;
+  margin: 2rem 0;
+}
+
+main .services .service button {
+  cursor: pointer;
+  margin: 0;
+  display: block;
+  text-align: right;
+  border-radius: 20px;
+  background-color: #81c41d;
+  border: none;
+  outline: none;
+  color: white;
+  font-weight: bold;
+  padding: 0.5rem 2rem;
+}
+
+main .services .service button:hover {
+  background-color: #707070;
+}
+
+main .newsletter {
+  background-color: #0684ac;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 1rem;
+}
+
+main .newsletter h2 {
+  text-shadow: none;
+  font-size: 2rem;
+  color: white;
+  margin: 0;
+  font-weight: normal;
+}
+
+main .newsletter form {
+  margin-left: 1rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-line-pack: center;
+      align-content: center;
+}
+
+main .newsletter form input[type="text"] {
+  border-radius: 20px;
+  outline: none;
+  border: none;
+  padding: 0.5rem 2rem;
+  margin: 0 1rem;
+}
+
+main .newsletter form input[type="submit"] {
+  margin: 0;
+  cursor: pointer;
+  margin: 0;
+  display: block;
+  text-align: right;
+  border-radius: 20px;
+  background-color: #81c41d;
+  border: none;
+  outline: none;
+  color: white;
+  font-weight: bold;
+  padding: 0.5rem 2rem;
+}
+
+main .newsletter form input[type="submit"]:hover {
+  background-color: #707070;
 }
 
 @media (max-width: 750px) {
@@ -230,6 +370,18 @@ header .hero .hero-ill img {
             flex-direction: column;
     padding: 2rem;
   }
+  header .hero .hero-titles h1 {
+    font-size: 3.5rem;
+  }
+  header .hero .hero-titles .cta-btns {
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+  header .hero .hero-titles .cta-btns button {
+    font-size: 0.8rem;
+    padding: 1rem;
+  }
   header .hero .hero-ill {
     -webkit-box-ordinal-group: 0;
         -ms-flex-order: -1;
@@ -240,6 +392,52 @@ header .hero .hero-ill img {
   }
   header .hero .hero-ill img {
     width: 100%;
+  }
+  main .services {
+    display: block;
+  }
+  main .services .service {
+    margin: 1rem auto;
+    width: 80%;
+  }
+  main .services .service * {
+    margin: 0;
+  }
+  main .newsletter {
+    display: block;
+    margin: 0;
+    padding: 0;
+  }
+  main .newsletter h2 {
+    font-size: 1rem;
+    margin: 1rem 0;
+    display: inline-block;
+    text-align: center;
+  }
+  main .newsletter form {
+    margin: 0;
+    padding: 0;
+    margin-left: 0rem;
+    display: block;
+  }
+  main .newsletter form input[type="text"] {
+    margin: 1rem 0;
+  }
+  main .newsletter form input[type="submit"] {
+    cursor: pointer;
+    margin: 0;
+    display: block;
+    text-align: right;
+    border-radius: 20px;
+    background-color: #81c41d;
+    border: none;
+    outline: none;
+    color: white;
+    font-weight: bold;
+    padding: 0.5rem 2rem;
+  }
+  main .newsletter form input[type="submit"]:hover {
+    background-color: #707070;
   }
 }
 /*# sourceMappingURL=main.css.map */

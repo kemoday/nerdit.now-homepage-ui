@@ -1,11 +1,31 @@
 $primaryTextColor: #0684ac;
 $primaryColor: #81c41d;
 $secondaryColor: #707070;
+//mixins
 
+@mixin mainButton {
+  cursor: pointer;
+  margin: 0;
+  display: block;
+  text-align: right;
+  border-radius: 20px;
+  background-color: $primaryColor;
+  border: none;
+  outline: none;
+  color: white;
+  font-weight: bold;
+  padding: 0.5rem 2rem;
+  &:hover {
+    background-color: $secondaryColor;
+  }
+}
+
+//*****************************
 * {
   font-size: 1rem;
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   transition-duration: 0.5s;
+  box-sizing: border-box;
 }
 body {
   margin: 0;
@@ -105,38 +125,23 @@ header {
       .cta-btns {
         margin: 2rem 0;
         display: flex;
-        justify-content: flex-start;
         align-items: center;
+        justify-content: space-between;
         button {
-          cursor: pointer;
-          margin: 0;
-          border: none;
-          padding: 1rem 3rem;
-          background-color: transparent;
-          &:hover {
-            color: $primaryTextColor;
-          }
-          li {
-            border: 1px solid $primaryColor;
-            border-radius: 50%;
-            color: $primaryColor;
-            padding: 1rem;
-            margin-right: 1rem;
-          }
           &:first-child {
-            color: white;
-            background-color: $primaryColor;
-            border-radius: 50px;
-            border: 1px solid transparent;
-            &:hover {
-              border: 1px solid $primaryColor;
-              color: $primaryColor;
-              background-color: transparent;
-            }
+            @include mainButton();
+            align-self: flex-start;
           }
           &:last-child {
-            padding: 0;
-            margin-left: 1rem;
+            background-color: transparent;
+            border: none;
+            li {
+              border: 1px solid $primaryColor;
+              border-radius: 50%;
+              color: $primaryColor;
+              padding: 0.7rem;
+              margin-right: 0.5rem;
+            }
           }
         }
       }
@@ -148,6 +153,91 @@ header {
       align-items: center;
       img {
         width: 100%;
+      }
+    }
+  }
+}
+
+main {
+  .section-title {
+    text-align: center;
+    h2 {
+      color: $primaryColor;
+      font-size: 2rem;
+      margin-bottom: 5px;
+      display: inline-block;
+    }
+    span {
+      border-radius: 8px;
+      display: inline-block;
+      width: 40px;
+      height: 5px;
+      background-color: $primaryColor;
+      margin-bottom: 1rem;
+    }
+  }
+  .services {
+    margin: 2rem 0;
+    margin-top: 0;
+    display: flex;
+    justify-content: center;
+    .service {
+      border-radius: 20px;
+      border: 1px solid #ddd;
+      margin: 0 1rem;
+      flex-basis: 25%;
+      padding: 0;
+      * {
+        margin: 5px;
+      }
+      H2 {
+        color: $primaryColor;
+        text-align: center;
+      }
+      p {
+        margin: 1rem 0.5rem;
+      }
+      li {
+        display: block;
+        text-align: center;
+        font-size: 3rem;
+        color: #999;
+        margin: 2rem 0;
+      }
+      button {
+        @include mainButton();
+      }
+    }
+  }
+  .newsletter {
+    background-color: $primaryTextColor;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+    h2 {
+      text-shadow: none;
+      font-size: 2rem;
+      color: white;
+      margin: 0;
+      font-weight: normal;
+    }
+    form {
+      margin-left: 1rem;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      align-content: center;
+      input[type="text"] {
+        border-radius: 20px;
+        outline: none;
+        border: none;
+        padding: 0.5rem 2rem;
+        margin: 0 1rem;
+      }
+      input[type="submit"] {
+        margin: 0;
+        @include mainButton();
       }
     }
   }
@@ -178,12 +268,57 @@ header {
       flex-direction: column;
       padding: 2rem;
       .hero-titles {
+        h1 {
+          font-size: 3.5rem;
+        }
+        .cta-btns {
+          justify-content: space-between;
+          button {
+            font-size: 0.8rem;
+            padding: 1rem;
+          }
+        }
       }
       .hero-ill {
         order: -1;
         flex: 1;
         img {
           width: 100%;
+        }
+      }
+    }
+  }
+  main {
+    .services {
+      display: block;
+      .service {
+        margin: 1rem auto;
+        width: 80%;
+        * {
+          margin: 0;
+        }
+      }
+    }
+    .newsletter {
+      display: block;
+      margin: 0;
+      padding: 0;
+      h2 {
+        font-size: 1rem;
+        margin: 1rem 0;
+        display: inline-block;
+        text-align: center;
+      }
+      form {
+        margin: 0;
+        padding: 0;
+        margin-left: 0rem;
+        display: block;
+        input[type="text"] {
+          margin: 1rem 0;
+        }
+        input[type="submit"] {
+          @include mainButton();
         }
       }
     }
