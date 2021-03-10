@@ -6,7 +6,7 @@ $secondaryColor: #707070;
 @mixin mainButton {
   cursor: pointer;
   margin: 0;
-  display: block;
+  display: inline;
   text-align: right;
   border-radius: 20px;
   background-color: $primaryColor;
@@ -241,7 +241,197 @@ main {
       }
     }
   }
+  .products {
+    margin: 1rem 0;
+    text-align: center;
+    .products-wrapper {
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      li.fa {
+        background-color: #ddd;
+        border-radius: 50%;
+        padding: 0.5rem 0.8rem;
+        font-size: 1.5rem;
+        cursor: pointer;
+        &:hover {
+          color: $primaryColor;
+        }
+      }
+      .product {
+        text-align: center;
+        img {
+          border-radius: 20px;
+          border: 2px solid #ddd;
+          width: 250px;
+          height: 250px;
+        }
+        h2 {
+          font-weight: bolder;
+          color: $primaryTextColor;
+        }
+        p {
+          color: $primaryColor;
+          font-weight: bold;
+        }
+      }
+    }
+    button {
+      @include mainButton();
+    }
+    .fa-plus {
+      display: block;
+      text-align: right;
+      font-size: 2.5rem;
+      color: $primaryTextColor;
+      padding: 0rem 4rem;
+    }
+  }
+  .greating {
+    display: flex;
+    margin: 1rem 0;
+    background-color: rgba(238, 238, 238, 0.3);
+    img {
+      width: 50%;
+    }
+    .greating-message {
+      padding: 1rem;
+      h2 {
+        font-size: 2rem;
+        margin-bottom: 0;
+      }
+      H3 {
+        color: $primaryColor;
+        font-weight: bolder;
+      }
+      p {
+        margin: 1rem 0;
+      }
+      .cta-btns {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        button {
+          &:first-child {
+            @include mainButton();
+          }
+          &:last-child {
+            background-color: transparent;
+            border: none;
+            li {
+              border: 1px solid $primaryColor;
+              border-radius: 50%;
+              color: $primaryColor;
+              padding: 0.7rem;
+              margin-right: 0.5rem;
+            }
+          }
+        }
+      }
+    }
+  }
+  .greating + li {
+    display: block;
+    text-align: left;
+    font-size: 2.5rem;
+    color: gray;
+    padding: 0rem 4rem;
+  }
+  .our-services {
+    > li {
+      font-size: 2rem;
+      color: gray;
+    }
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 1rem 0;
+    margin-bottom: 2rem;
+    padding: 0 1rem;
+    .services-wrapper {
+      display: flex;
+      flex: 1;
+      justify-content: space-evenly;
+      .our-service {
+        cursor: pointer;
+        text-align: center;
+        padding: 1rem;
+        margin: 0 1rem;
+        width: 250px;
+        color: white;
+        border: 1px solid transparent;
+        background-color: $primaryColor;
+        border-radius: 8px;
+        li {
+          padding: 1rem;
+          font-size: 4rem;
+        }
+        p {
+          font-weight: bold;
+          margin: 0.5rem 0;
+        }
+        &:hover {
+          border: 1px solid $primaryColor;
+          background-color: white;
+          li,
+          p {
+            color: $primaryColor;
+          }
+        }
+      }
+    }
+  }
+  .our-services + .fa-info-circle {
+    font-size: 2.5rem;
+    color: $primaryTextColor;
+  }
 }
+
+/*
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+*/
 
 @media (max-width: 750px) {
   header {

@@ -149,7 +149,7 @@ header .hero .hero-titles .cta-btns {
 header .hero .hero-titles .cta-btns button:first-child {
   cursor: pointer;
   margin: 0;
-  display: block;
+  display: inline;
   text-align: right;
   border-radius: 20px;
   background-color: #81c41d;
@@ -262,7 +262,7 @@ main .services .service li {
 main .services .service button {
   cursor: pointer;
   margin: 0;
-  display: block;
+  display: inline;
   text-align: right;
   border-radius: 20px;
   background-color: #81c41d;
@@ -326,7 +326,7 @@ main .newsletter form input[type="submit"] {
   margin: 0;
   cursor: pointer;
   margin: 0;
-  display: block;
+  display: inline;
   text-align: right;
   border-radius: 20px;
   background-color: #81c41d;
@@ -341,6 +341,276 @@ main .newsletter form input[type="submit"]:hover {
   background-color: #707070;
 }
 
+main .products {
+  margin: 1rem 0;
+  text-align: center;
+}
+
+main .products .products-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+main .products .products-wrapper li.fa {
+  background-color: #ddd;
+  border-radius: 50%;
+  padding: 0.5rem 0.8rem;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+main .products .products-wrapper li.fa:hover {
+  color: #81c41d;
+}
+
+main .products .products-wrapper .product {
+  text-align: center;
+}
+
+main .products .products-wrapper .product img {
+  border-radius: 20px;
+  border: 2px solid #ddd;
+  width: 250px;
+  height: 250px;
+}
+
+main .products .products-wrapper .product h2 {
+  font-weight: bolder;
+  color: #0684ac;
+}
+
+main .products .products-wrapper .product p {
+  color: #81c41d;
+  font-weight: bold;
+}
+
+main .products button {
+  cursor: pointer;
+  margin: 0;
+  display: inline;
+  text-align: right;
+  border-radius: 20px;
+  background-color: #81c41d;
+  border: none;
+  outline: none;
+  color: white;
+  font-weight: bold;
+  padding: 0.5rem 2rem;
+}
+
+main .products button:hover {
+  background-color: #707070;
+}
+
+main .products .fa-plus {
+  display: block;
+  text-align: right;
+  font-size: 2.5rem;
+  color: #0684ac;
+  padding: 0rem 4rem;
+}
+
+main .greating {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 1rem 0;
+  background-color: rgba(238, 238, 238, 0.3);
+}
+
+main .greating img {
+  width: 50%;
+}
+
+main .greating .greating-message {
+  padding: 1rem;
+}
+
+main .greating .greating-message h2 {
+  font-size: 2rem;
+  margin-bottom: 0;
+}
+
+main .greating .greating-message H3 {
+  color: #81c41d;
+  font-weight: bolder;
+}
+
+main .greating .greating-message p {
+  margin: 1rem 0;
+}
+
+main .greating .greating-message .cta-btns {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+main .greating .greating-message .cta-btns button:first-child {
+  cursor: pointer;
+  margin: 0;
+  display: inline;
+  text-align: right;
+  border-radius: 20px;
+  background-color: #81c41d;
+  border: none;
+  outline: none;
+  color: white;
+  font-weight: bold;
+  padding: 0.5rem 2rem;
+}
+
+main .greating .greating-message .cta-btns button:first-child:hover {
+  background-color: #707070;
+}
+
+main .greating .greating-message .cta-btns button:last-child {
+  background-color: transparent;
+  border: none;
+}
+
+main .greating .greating-message .cta-btns button:last-child li {
+  border: 1px solid #81c41d;
+  border-radius: 50%;
+  color: #81c41d;
+  padding: 0.7rem;
+  margin-right: 0.5rem;
+}
+
+main .greating + li {
+  display: block;
+  text-align: left;
+  font-size: 2.5rem;
+  color: gray;
+  padding: 0rem 4rem;
+}
+
+main .our-services {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 1rem 0;
+  margin-bottom: 2rem;
+  padding: 0 1rem;
+}
+
+main .our-services > li {
+  font-size: 2rem;
+  color: gray;
+}
+
+main .our-services .services-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+}
+
+main .our-services .services-wrapper .our-service {
+  cursor: pointer;
+  text-align: center;
+  padding: 1rem;
+  margin: 0 1rem;
+  width: 250px;
+  color: white;
+  border: 1px solid transparent;
+  background-color: #81c41d;
+  border-radius: 8px;
+}
+
+main .our-services .services-wrapper .our-service li {
+  padding: 1rem;
+  font-size: 4rem;
+}
+
+main .our-services .services-wrapper .our-service p {
+  font-weight: bold;
+  margin: 0.5rem 0;
+}
+
+main .our-services .services-wrapper .our-service:hover {
+  border: 1px solid #81c41d;
+  background-color: white;
+}
+
+main .our-services .services-wrapper .our-service:hover li,
+main .our-services .services-wrapper .our-service:hover p {
+  color: #81c41d;
+}
+
+main .our-services + .fa-info-circle {
+  font-size: 2.5rem;
+  color: #0684ac;
+}
+
+/*
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+*/
 @media (max-width: 750px) {
   header nav {
     padding: 1rem;
@@ -426,7 +696,7 @@ main .newsletter form input[type="submit"]:hover {
   main .newsletter form input[type="submit"] {
     cursor: pointer;
     margin: 0;
-    display: block;
+    display: inline;
     text-align: right;
     border-radius: 20px;
     background-color: #81c41d;
